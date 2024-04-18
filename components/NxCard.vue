@@ -15,8 +15,8 @@
 const props = defineProps({
   header: String,
   maxWidth: {
-    type: Number,    
-    default: 18,
+    type: Number,
+    default: 24,
   },
   title: String,
   text: String,

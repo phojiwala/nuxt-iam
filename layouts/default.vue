@@ -56,27 +56,19 @@ const nuxtIamMenu = [
 const mainMenu = [
   {
     name: "LOGO",
-    bold: true,
-  },
-  {
-    name: "Home",
     link: "/",
-  },
-  {
-    name: "Nuxt IAM",
-    children: nuxtIamMenu,
-  },
-  {
-    name: "Sample",
-    link: "/sample",
   },
   {
     name: "Protected Page",
     link: "/protected",
   },
+  // {
+  //   name: "Contact",
+  //   link: "/contact",
+  // },
   {
-    name: "Contact",
-    link: "/contact",
+    name: "Nuxt IAM",
+    children: nuxtIamMenu,
   },
 ] as NxLinks;
 

@@ -22,16 +22,6 @@
       </div>
     </div>
   </div>
-  <div v-else class="is-not-logged-in">
-    <IamLogoLink />
-    <NxNavbar
-      :menu="isNotLoggedInMenu"
-      theme="none"
-      size="small"
-      class="login-register-menu"
-      @clicked="menuClicked"
-    />
-  </div>
 </template>
 
 <script setup lang="ts">

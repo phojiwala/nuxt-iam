@@ -163,6 +163,7 @@ function toggleShowChildren(value: boolean) {
 nav {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  margin-bottom: 20px;
 }
 
 li {

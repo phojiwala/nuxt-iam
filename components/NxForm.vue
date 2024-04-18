@@ -1,6 +1,6 @@
 <!-- This component displays an object as an input form -->
 <template>
-  <form class="mb-5" :style="`width: ${width}rem;`">
+  <form class="mb-5">
     <div class="mb-3">
       <div v-for="(item, index) in data" :key="index">
         <label v-if="item.label && item.show !== false" :for="item.label" class="form-label"><strong>{{ item.label }}</strong></label>
@@ -39,8 +39,8 @@ const props = defineProps({
     type: Array<NxFormInput>,
   },
   width: {
-    type: Number,    
-    default: 14,
+    type: Number,
+    default: 16,
   },
   returnKeys: {
     type: Array<string>,
@@ -52,15 +52,15 @@ const props = defineProps({
   buttonTheme: {
     validator(value: string) {
       return [
-        'primary', 
-        'secondary', 
-        'success', 
-        'info', 
-        'warning', 
-        'danger', 
-        'dark', 
-        'light', 
-        'link', 
+        'primary',
+        'secondary',
+        'success',
+        'info',
+        'warning',
+        'danger',
+        'dark',
+        'light',
+        'link',
         'primary-outline',
         'success-outline'
       ].includes(value)
@@ -75,26 +75,26 @@ const updatedInputs = {}
  * @desc Update inputs when the form is updated
  * @param event Change event received from HTML tag
  */
-function updateInputs(event: Event) {  
+function updateInputs(event: Event) {
   const targetElement = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
   const id = targetElement.getAttribute('id')
   const value = targetElement.value
 
   /* @ts-ignore */
-  if (id && value) updatedInputs[id] = value 
+  if (id && value) updatedInputs[id] = value
 }
 
 /**
  * @desc Process inputs and return submit
  */
-function submit() {   
-  // If we have return keys, get their values and add to updated inputs 
+function submit() {
+  // If we have return keys, get their values and add to updated inputs
   if (props.returnKeys?.length && props.data?.length) {
     // Get inputs with keys
     props.returnKeys.forEach((key) => {
       const input = props.data?.find(input => input.id === key)
       /* @ts-ignore */
-      if (input) updatedInputs[input.id] = input.value      
+      if (input) updatedInputs[input.id] = input.value
     })
   }
 

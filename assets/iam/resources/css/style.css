@@ -15,6 +15,7 @@ body {
   width: 80px;
   height: 80px;
 }
+
 .loading-spinner:after {
   content: " ";
   display: block;
@@ -26,11 +27,17 @@ body {
   border-color: #184b81 transparent #184b81 transparent;
   animation: loading-spinner 1.2s linear infinite;
 }
+
 @keyframes loading-spinner {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
+}
+
+.form-control[data-v-4de8b84b] {
+  width: -webkit-fill-available !important;
 }
