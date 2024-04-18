@@ -48,3 +48,29 @@ Learn more about how Nuxt IAM works by looking at the [concepts](https://nuxt-ia
 Check out the sample app here: https://nuxt-iam.vercel.app/iam/
 
 For documentation: https://nuxt-iam.vercel.app/iam/docs
+
+Libs sizes:
+prisma - 11.3 MB
+@prisma/client - 8.48 MB
+@pinia/nuxt - 8.69 kB
+pinia - 379 kB
+
+@sendgrid/mail - 17.4 kB
+nodemailer - 503 kB
+argon2 - 872 kB
+dayjs - 664 kB
+uuid - 123 kB
+generate-password - 24.5 kB
+google-auth-library - 559 kB
+nuxt-vue3-google-signin - 8.32 kB
+jsonwebtoken - 43.5 kB
+
+--------------------
+
+libs you can change
+
+prisma -> drizzle orm
+pinia -> useState
+
+
+
